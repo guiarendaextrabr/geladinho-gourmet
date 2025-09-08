@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia do Geladinho Gourmet - Transforme em Renda Extra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-escuro: #1a4b8c;
+            --azul-medio: #2d6bc9;
+            --azul-claro: #e8f1ff;
+            --laranja: #ff7a00;
+            --laranja-claro: #fff2e8;
+            --branco: #ffffff;
+            --cinza-escuro: #333333;
+            --cinza-medio: #666666;
+            --cinza-claro: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--cinza-escuro);
+            line-height: 1.6;
+            background-color: var(--branco);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--azul-escuro);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--laranja);
+            color: var(--branco);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(255, 122, 0, 0.25);
+        }
+        
+        .btn:hover {
+            background-color: var(--azul-escuro);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(26, 75, 140, 0.3);
+        }
+        
+        .btn-grande {
+            font-size: 1.2rem;
+            padding: 18px 40px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        /* Header e Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--azul-medio) 0%, var(--azul-escuro) 100%);
+            color: var(--branco);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(26, 75, 140, 0.9)), url('/assets/img/bg-cabecalho.jpg'); /* INSIRA O CAMINHO DA IMAGEM AQUI */
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(5px); /* Efeito de blur escuro */
+            color: var(--branco);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--branco);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Seção de Apresentação */
+        .apresentacao {
+            background-color: var(--branco);
+        }
+        
+        .apresentacao-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .apresentacao-imagem {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .apresentacao-imagem img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .apresentacao-texto {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        /* Seção de Galeria */
+        .galeria {
+            background-color: var(--laranja-claro);
+            text-align: center;
+        }
+        
+        .galeria h2 {
+            margin-bottom: 40px;
+        }
+        
+        .galeria-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .galeria-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 250px;
+            background-color: var(--azul-medio);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .galeria-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Seção de Benefícios */
+        .beneficios {
+            background-color: var(--azul-claro);
+        }
+        
+        .beneficios h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .lista-beneficios {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .item-beneficio {
+            background-color: var(--branco);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .icone-beneficio {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--laranja);
+            min-width: 30px;
+            text-align: center;
+        }
+        
+        /* Seção de Bônus */
+        .bonus {
+            background-color: var(--laranja-claro);
+        }
+        
+        .bonus-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .bonus-imagem {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .bonus-imagem img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .bonus-texto {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .destaque {
+            color: var(--laranja);
+            font-weight: 600;
+        }
+        
+        /* Seção de Depoimentos */
+        .depoimentos {
+            background-color: var(--branco);
+        }
+        
+        .depoimentos h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .depoimentos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .depoimento {
+            background-color: var(--cinza-claro);
+            padding: 30px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .depoimento-texto {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .depoimento-autor {
+            display: flex;
+            align-items: center;
+        }
+        
+        .depoimento-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 3px solid var(--azul-medio);
+        }
+        
+        /* Seção de Garantia */
+        .garantia {
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            text-align: center;
+        }
+        
+        .garantia h2 {
+            color: var(--branco);
+        }
+        
+        .garantia-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Seção de FAQ */
+        .faq {
+            background-color: var(--cinza-claro);
+        }
+        
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .perguntas-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .pergunta {
+            margin-bottom: 20px;
+            background-color: var(--branco);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .pergunta-titulo {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .pergunta-resposta {
+            padding: 0 20px 20px;
+            display: none;
+        }
+        
+        .pergunta.ativa .pergunta-resposta {
+            display: block;
+        }
+        
+        /* Seção de CTA Final */
+        .cta-final {
+            background: linear-gradient(135deg, var(--azul-medio) 0%, var(--azul-escuro) 100%);
+            color: var(--branco);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta-final h2 {
+            color: var(--branco);
+            margin-bottom: 20px;
+        }
+        
+        .cta-final p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: var(--cinza-escuro);
+            color: var(--branco);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .instagram-link {
+            color: var(--branco);
+            margin: 15px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .instagram-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .apresentacao-container, .bonus-container {
+                flex-direction: column;
+            }
+            
+            .btn-grande {
+                font-size: 1.1rem;
+                padding: 15px 30px;
+            }
+            
+            .galeria-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .galeria-item {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Guia da Renda Extra: Geladinho Gourmet</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transforme Geladinhos Gourmet em Renda Extra!</h1>
+            <p>Aprenda receitas, precificação e estratégias simples para lucrar com geladinhos gourmet.</p>
+            <a href="https://pay.kiwify.com.br/rT41hzS" class="btn btn-grande">Quero meu Ebook agora!</a>
+        </div>
+    </section>
+
+    <!-- Apresentação do Ebook -->
+    <section class="apresentacao">
+        <div class="container apresentacao-container">
+            <div class="apresentacao-imagem">
+                <img src="/assets/img/capa-ebook.png" alt="Capa do Ebook Guia do Geladinho Gourmet">
+            </div>
+            <div class="apresentacao-texto">
+                <h2>O que você vai encontrar no ebook?</h2>
+                <p>O "Guia do Geladinho Gourmet" é o material mais completo do mercado para quem quer iniciar um negócio de geladinhos gourmet ou expandir suas vendas. Desenvolvido por especialistas em gastronomia e empreendedorismo, este ebook traz tudo o que você precisa para ter sucesso nesse mercado.</p>
+                <p>Com linguagem simples e direta, você terá acesso a conhecimentos valiosos que vão desde as receitas mais saborosas até as melhores estratégias de vendas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Galeria -->
+    <section class="galeria">
+        <div class="container">
+            <h2>Geladinhos Incríveis Que Você Vai Aprender a Fazer</h2>
+            <p>Veja alguns exemplos dos resultados que você poderá alcançar seguindo as técnicas do ebook</p>
+            
+            <div class="galeria-container">
+                <div class="galeria-item"><img src="/assets/img/geladinho1.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="/assets/img/geladinho2.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="/assets/img/geladinho3.jfif" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="/assets/img/geladinho4.jfif" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="/assets/img/geladinho5.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="/assets/img/geladinho6.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="/assets/img/geladinho7.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="/assets/img/geladinho8.jpg" alt="geladinho gourmet"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios/Conteúdo do Ebook -->
+    <section class="beneficios">
+        <div class="container">
+            <h2>O que você vai aprender:</h2>
+            <ul class="lista-beneficios">
+                <li class="item-beneficio">
+                    <div class="icone-beneficio">✔️</div>
+                    <div>Receitas exclusivas e deliciosas que fazem sucesso</div>
+                </li>
+                <li class="item-beneficio">
+                    <div class="icone-beneficio">✔️</div>
+                    <div>Como calcular custos de forma simples e precisa</div>
+                </li>
+                <li class="item-beneficio">
+                    <div class="icone-beneficio">✔️</div>
+                    <div>Estratégias para precificar e definir sua margem de lucro</div>
+                </li>
+                <li class="item-beneficio">
+                    <div class="icone-beneficio">✔️</div>
+                    <div>Como fechar parcerias e ampliar suas vendas</div>
+                </li>
+                <li class="item-beneficio">
+                    <div class="icone-beneficio">✔️</div>
+                    <div>Dicas de marketing digital e redes sociais para alavancar seu negócio</div>
+                </li>
+                <li class="item-beneficio">
+                    <div class="icone-beneficio">✔️</div>
+                    <div>Materiais de apoio: planilhas de controle e muito mais</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Bônus -->
+    <section class="bonus">
+        <div class="container bonus-container">
+            <div class="bonus-texto">
+                <h2>Bônus Exclusivo</h2>
+                <p>No checkout, você terá a oportunidade de adquirir um <span class="destaque">pack de artes profissionais</span> para impulsionar suas vendas!</p>
+                <p>Este bônus inclui:</p>
+                <ul>
+                    <li>Artes prontas para Instagram e outras redes sociais</li>
+                    <li>Modelos de cardápios personalizáveis</li>
+                    <li>Artes para adesivos e embalagens</li>
+                </ul>
+                <p><span class="destaque">Importante:</span> Este é um extra opcional que pode ser adicionado durante o processo de compra.</p>
+            </div>
+            <div class="bonus-imagem">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23ff7a00' fill-opacity='0.2' rx='10'/><text x='200' y='150' font-family='Arial' font-size='20' fill='%23ff7a00' text-anchor='middle'>Pack de Artes Profissionais</text></svg>" alt="Pack de artes profissionais para redes sociais">
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2>O que estão dizendo sobre o ebook</h2>
+            <div class="depoimentos-container">
+                <div class="depoimento">
+                    <div class="depoimento-texto">
+                        "Comprei o ebook há um mês e já recuperei o valor investido. As estratégias de precificação foram essenciais para meu negócio!"
+                    </div>
+                    <div class="depoimento-autor">
+                        <img src="/assets/img/img-mulher2.jpg" alt="Maria Silva" class="depoimento-avatar">
+                        <div>
+                            <strong>Maria Silva</strong><br>
+                            São Paulo
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento">
+                    <div class="depoimento-texto">
+                        "As receitas são incríveis e fáceis de fazer. Meus clientes amaram os sabores diferenciados que aprendi a fazer!"
+                    </div>
+                    <div class="depoimento-autor">
+                        <img src="/assets/img/img-homem.jpg" alt="João Pereira" class="depoimento-avatar">
+                        <div>
+                            <strong>João Pereira</strong><br>
+                            Minas Gerais
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento">
+                    <div class="depoimento-texto">
+                        "As dicas de marketing digital mudaram completamente meu negócio. Tripliquei minhas vendas em apenas 2 semanas!"
+                    </div>
+                    <div class="depoimento-autor">
+                        <img src="/assets/img/img-mulher1.jpg" alt="Ana Lima" class="depoimento-avatar">
+                        <div>
+                            <strong>Ana Lima</strong><br>
+                            Rio de Janeiro
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantia -->
+    <section class="garantia">
+        <div class="container">
+            <div class="garantia-icon">🛡️</div>
+            <h2>Garantia de 7 dias</h2>
+            <p>Se você não ficar satisfeito com o ebook, devolvemos seu dinheiro sem complicações. Sem perguntas, sem letras miúdas.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="perguntas-container">
+                <div class="pergunta">
+                    <div class="pergunta-titulo">
+                        Como recebo o ebook?
+                        <span>+</span>
+                    </div>
+                    <div class="pergunta-resposta">
+                        Após a confirmação do pagamento, você terá acesso liberado na área de membros da Kiwify, onde poderá fazer o download do ebook. O formato é PDF, compatível com qualquer dispositivo.
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <div class="pergunta-titulo">
+                        Preciso ter experiência para começar?
+                        <span>+</span>
+                    </div>
+                    <div class="pergunta-resposta">
+                        Não! O ebook foi desenvolvido para iniciantes e contém todas as informações necessárias para começar do zero.
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <div class="pergunta-titulo">
+                        Posso vender sem freezer próprio?
+                        <span>+</span>
+                    </div>
+                    <div class="pergunta-resposta">
+                        Sim! No ebook ensinamos estratégias para começar mesmo com equipamentos limitados e como expandir conforme seu negócio cresce.
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <div class="pergunta-titulo">
+                        Quanto tempo leva para ver resultados?
+                        <span>+</span>
+                    </div>
+                    <div class="pergunta-resposta">
+                        Os resultados variam conforme seu empenho e dedicação, mas muitos alunos relatam primeiras vendas já na primeira semana após aplicar as estratégias.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Está pronto para transformar sua paixão em renda extra?</h2>
+            <p>Junte-se a centenas de empreendedores que já estão faturando com geladinhos gourmet. Comece hoje mesmo!</p>
+            <a href="https://pay.kiwify.com.br/rT41hzS" class="btn btn-grande">Quero começar agora!</a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2023 Guia do Geladinho Gourmet - Todos os direitos reservados</p>
+            <a href="https://instagram.com/GuiadaRendaExtraBR" class="instagram-link">@GuiadaRendaExtraBR</a>
+        </div>
+    </footer>
+
+    <script>
+        // Script para o FAQ
+        document.querySelectorAll('.pergunta-titulo').forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                const pergunta = titulo.parentElement;
+                pergunta.classList.toggle('ativa');
+                
+                const sinal = titulo.querySelector('span');
+                sinal.textContent = pergunta.classList.contains('ativa') ? '-' : '+';
+            });
+        });
+    </script>
+</body>
+</html>
