@@ -78,6 +78,20 @@
             padding: 60px 0;
         }
         
+        /* Animação de entrada */
+        .animate-on-load {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         /* Header e Hero Section */
         header {
             background: linear-gradient(135deg, var(--azul-medio) 0%, var(--azul-escuro) 100%);
@@ -104,10 +118,10 @@
         
         .hero {
             padding: 150px 0 80px;
-            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(26, 75, 140, 0.9)), url('/assets/img/bg-cabecalho.jpg'); /* INSIRA O CAMINHO DA IMAGEM AQUI */
+            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(26, 75, 140, 0.9)), url('./assets/img/bg-hero.jpg');
             background-size: cover;
             background-position: center;
-            backdrop-filter: blur(5px); /* Efeito de blur escuro */
+            backdrop-filter: blur(5px);
             color: var(--branco);
             text-align: center;
         }
@@ -116,6 +130,12 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: var(--branco);
+        }
+        
+        .hero h1 .highlight {
+            color: var(--laranja);
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         .hero p {
@@ -449,19 +469,19 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero animate-on-load">
         <div class="container">
-            <h1>Transforme Geladinhos Gourmet em Renda Extra!</h1>
+            <h1>Transforme <span class="highlight">Geladinhos Gourmet</span> em Renda Extra!</h1>
             <p>Aprenda receitas, precificação e estratégias simples para lucrar com geladinhos gourmet.</p>
             <a href="https://pay.kiwify.com.br/rT41hzS" class="btn btn-grande">Quero meu Ebook agora!</a>
         </div>
     </section>
 
     <!-- Apresentação do Ebook -->
-    <section class="apresentacao">
+    <section class="apresentacao animate-on-load" style="animation-delay: 0.2s;">
         <div class="container apresentacao-container">
             <div class="apresentacao-imagem">
-                <img src="/assets/img/capa-ebook.png" alt="Capa do Ebook Guia do Geladinho Gourmet">
+                <img src="./assets/img/capa-ebook.png" alt="Capa do Ebook Guia do Geladinho Gourmet">
             </div>
             <div class="apresentacao-texto">
                 <h2>O que você vai encontrar no ebook?</h2>
@@ -472,26 +492,26 @@
     </section>
 
     <!-- Seção de Galeria -->
-    <section class="galeria">
+    <section class="galeria animate-on-load" style="animation-delay: 0.4s;">
         <div class="container">
             <h2>Geladinhos Incríveis Que Você Vai Aprender a Fazer</h2>
             <p>Veja alguns exemplos dos resultados que você poderá alcançar seguindo as técnicas do ebook</p>
             
             <div class="galeria-container">
-                <div class="galeria-item"><img src="/assets/img/geladinho1.jpg" alt="geladinho gourmet"></div>
-                <div class="galeria-item"><img src="/assets/img/geladinho2.jpg" alt="geladinho gourmet"></div>
-                <div class="galeria-item"><img src="/assets/img/geladinho3.jfif" alt="geladinho gourmet"></div>
-                <div class="galeria-item"><img src="/assets/img/geladinho4.jfif" alt="geladinho gourmet"></div>
-                <div class="galeria-item"><img src="/assets/img/geladinho5.jpg" alt="geladinho gourmet"></div>
-                <div class="galeria-item"><img src="/assets/img/geladinho6.jpg" alt="geladinho gourmet"></div>
-                <div class="galeria-item"><img src="/assets/img/geladinho7.jpg" alt="geladinho gourmet"></div>
-                <div class="galeria-item"><img src="/assets/img/geladinho8.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="./assets/img/geladinho1.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="./assets/img/geladinho2.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="./assets/img/geladinho3.jfif" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="./assets/img/geladinho4.jfif" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="./assets/img/geladinho5.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="./assets/img/geladinho6.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="./assets/img/geladinho7.jpg" alt="geladinho gourmet"></div>
+                <div class="galeria-item"><img src="./assets/img/geladinho8.jpg" alt="geladinho gourmet"></div>
             </div>
         </div>
     </section>
 
     <!-- Benefícios/Conteúdo do Ebook -->
-    <section class="beneficios">
+    <section class="beneficios animate-on-load" style="animation-delay: 0.6s;">
         <div class="container">
             <h2>O que você vai aprender:</h2>
             <ul class="lista-beneficios">
@@ -514,17 +534,13 @@
                 <li class="item-beneficio">
                     <div class="icone-beneficio">✔️</div>
                     <div>Dicas de marketing digital e redes sociais para alavancar seu negócio</div>
-                </li>
-                <li class="item-beneficio">
-                    <div class="icone-beneficio">✔️</div>
-                    <div>Materiais de apoio: planilhas de controle e muito mais</div>
-                </li>
+                </li>   
             </ul>
         </div>
     </section>
 
     <!-- Bônus -->
-    <section class="bonus">
+    <section class="bonus animate-on-load" style="animation-delay: 0.8s;">
         <div class="container bonus-container">
             <div class="bonus-texto">
                 <h2>Bônus Exclusivo</h2>
@@ -538,13 +554,13 @@
                 <p><span class="destaque">Importante:</span> Este é um extra opcional que pode ser adicionado durante o processo de compra.</p>
             </div>
             <div class="bonus-imagem">
-                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23ff7a00' fill-opacity='0.2' rx='10'/><text x='200' y='150' font-family='Arial' font-size='20' fill='%23ff7a00' text-anchor='middle'>Pack de Artes Profissionais</text></svg>" alt="Pack de artes profissionais para redes sociais">
+                <img src="./assets/img/pack-artes.jpg" alt="Pack de artes profissionais para redes sociais">
             </div>
         </div>
     </section>
 
     <!-- Depoimentos -->
-    <section class="depoimentos">
+    <section class="depoimentos animate-on-load" style="animation-delay: 1s;">
         <div class="container">
             <h2>O que estão dizendo sobre o ebook</h2>
             <div class="depoimentos-container">
@@ -553,7 +569,7 @@
                         "Comprei o ebook há um mês e já recuperei o valor investido. As estratégias de precificação foram essenciais para meu negócio!"
                     </div>
                     <div class="depoimento-autor">
-                        <img src="/assets/img/img-mulher2.jpg" alt="Maria Silva" class="depoimento-avatar">
+                        <img src="./assets/img/img-mulher2.jpg" alt="Maria Silva" class="depoimento-avatar">
                         <div>
                             <strong>Maria Silva</strong><br>
                             São Paulo
@@ -565,7 +581,7 @@
                         "As receitas são incríveis e fáceis de fazer. Meus clientes amaram os sabores diferenciados que aprendi a fazer!"
                     </div>
                     <div class="depoimento-autor">
-                        <img src="/assets/img/img-homem.jpg" alt="João Pereira" class="depoimento-avatar">
+                        <img src="./assets/img/img-homem.jpg" alt="João Pereira" class="depoimento-avatar">
                         <div>
                             <strong>João Pereira</strong><br>
                             Minas Gerais
@@ -577,7 +593,7 @@
                         "As dicas de marketing digital mudaram completamente meu negócio. Tripliquei minhas vendas em apenas 2 semanas!"
                     </div>
                     <div class="depoimento-autor">
-                        <img src="/assets/img/img-mulher1.jpg" alt="Ana Lima" class="depoimento-avatar">
+                        <img src="./assets/img/img-mulher1.jpg" alt="Ana Lima" class="depoimento-avatar">
                         <div>
                             <strong>Ana Lima</strong><br>
                             Rio de Janeiro
@@ -589,7 +605,7 @@
     </section>
 
     <!-- Garantia -->
-    <section class="garantia">
+    <section class="garantia animate-on-load" style="animation-delay: 1.2s;">
         <div class="container">
             <div class="garantia-icon">🛡️</div>
             <h2>Garantia de 7 dias</h2>
@@ -598,7 +614,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="faq">
+    <section class="faq animate-on-load" style="animation-delay: 1.4s;">
         <div class="container">
             <h2>Perguntas Frequentes</h2>
             <div class="perguntas-container">
@@ -643,7 +659,7 @@
     </section>
 
     <!-- CTA Final -->
-    <section class="cta-final">
+    <section class="cta-final animate-on-load" style="animation-delay: 1.6s;">
         <div class="container">
             <h2>Está pronto para transformar sua paixão em renda extra?</h2>
             <p>Junte-se a centenas de empreendedores que já estão faturando com geladinhos gourmet. Comece hoje mesmo!</p>
@@ -655,7 +671,7 @@
     <footer>
         <div class="container footer-container">
             <p>&copy; 2023 Guia do Geladinho Gourmet - Todos os direitos reservados</p>
-            <a href="https://instagram.com/GuiadaRendaExtraBR" class="instagram-link">@GuiadaRendaExtraBR</a>
+            <a href="https://instagram.com/guiarendaextrabr" class="instagram-link" target="_blank">@guiarendaextrabr</a>
         </div>
     </footer>
 
@@ -668,6 +684,16 @@
                 
                 const sinal = titulo.querySelector('span');
                 sinal.textContent = pergunta.classList.contains('ativa') ? '-' : '+';
+            });
+        });
+
+        // Script para animação única
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-on-load');
+            animatedElements.forEach(el => {
+                el.addEventListener('animationend', () => {
+                    el.classList.remove('animate-on-load');
+                });
             });
         });
     </script>
